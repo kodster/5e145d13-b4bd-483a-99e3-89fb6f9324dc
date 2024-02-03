@@ -5,7 +5,7 @@ namespace SequenceInsights.Application.Strategies;
 /// <summary>
 /// This is a the dynamic approach that doesn't work for all test cases.
 /// </summary>
-public class LongestIncreasingSubsequenceFinder : ISubsequenceFinderService
+public class LongestIncreasingSubsequenceFinder : ISubsequenceFinder
 {
     public IEnumerable<int> FindSubsequence(IEnumerable<int> inputNumbers)
     {

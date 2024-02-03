@@ -1,6 +1,6 @@
 ﻿namespace SequenceInsights.Application.Core.Interfaces;
 
-public interface ISubsequenceFinderService
+public interface ISubsequenceFinder
 {
     IEnumerable<int> FindSubsequence(IEnumerable<int> numbers);
 }

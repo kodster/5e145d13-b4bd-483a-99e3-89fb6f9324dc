@@ -12,7 +12,7 @@ namespace SequenceInsights.Tests.UnitTests
     {
         private readonly IInputParser _inputParser = new SpaceSeparatedInputParser();
         private readonly IOutputParser _outputParser = new OutputParser();
-        private readonly ISubsequenceFinderService _subsequenceFinderService = new LongestIncreasingSubsequenceFinder();
+        private readonly ISubsequenceFinder _subsequenceFinder = new LongestIncreasingSubsequenceFinder();
 
 
         [Theory(Skip = "This implementation is not compatible with the tests.")]
@@ -20,7 +20,7 @@ namespace SequenceInsights.Tests.UnitTests
         public void Given_TestCase_When_Process_Then_ShouldHaveExpectedResult(string testCase, string input, string expectedOutput)
 
         {
-            var output = _subsequenceFinderService.FindSubsequence(_inputParser.ParseInput(input));
+            var output = _subsequenceFinder.FindSubsequence(_inputParser.ParseInput(input));
             var result = _outputParser.ParseOutput(output);
             result.Should().BeEquivalentTo(expectedOutput, testCase);
         }

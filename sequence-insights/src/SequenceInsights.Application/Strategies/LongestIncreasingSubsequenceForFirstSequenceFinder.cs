@@ -3,7 +3,7 @@
 namespace SequenceInsights.Application.Strategies;
 
 // This is Implementation that works with all tests
-public class LongestIncreasingSubsequenceForFirstSequenceFinder : ISubsequenceFinderService
+public class LongestIncreasingSubsequenceForFirstSequenceFinder : ISubsequenceFinder
 {
     public IEnumerable<int> FindSubsequence(IEnumerable<int> numbers)
     {
