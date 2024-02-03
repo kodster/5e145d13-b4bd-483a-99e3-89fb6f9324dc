@@ -1,4 +1,4 @@
-namespace SequenceInsights.Tests.TestData;
+namespace SequenceInsights.Tests.Models;
 
 // Define a class to represent a test case
 public class TestCase

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace SequenceInsights.Tests.TestData;
+namespace SequenceInsights.Tests.Utility;
 
 public static class Extensions
 {
