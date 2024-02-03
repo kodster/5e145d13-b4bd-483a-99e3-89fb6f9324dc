@@ -1,23 +1,41 @@
-﻿using SequenceInsights.Application.Strategies;
+﻿using Microsoft.Extensions.DependencyInjection;
+using SequenceInsights.Application.Core.Interfaces;
+using SequenceInsights.Application.Parsers.Input;
+using SequenceInsights.Application.Strategies;
 
 namespace SequenceInsights.Application
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            // Set up the DI container
+            var serviceProvider = new ServiceCollection()
+                .AddSingleton<IInputParser, SpaceSeparatedInputParser>()
+                .AddTransient<LongestIncreasingSubsequenceForFirstSequenceFinder>()
+                .BuildServiceProvider();
 
-            Console.WriteLine("Enter a sequence of integers separated by single whitespace:");
-            var input = Console.ReadLine();
-            var sequence = input.Split(' ').Select(int.Parse).ToList();
+            while (true)
+            {
+                Console.WriteLine("Enter a sequence of integers separated by a single whitespace (or type 'exit' to quit):");
+                var input = Console.ReadLine();
 
-            var subsequenceFinder = new LongestIncreasingSubsequenceForFirstSequenceFinder();
+                if (input?.ToLower() == "exit")
+                {
+                    Console.WriteLine("Exiting the program. Goodbye!");
+                    break;
+                }
 
+                // Use DI to get the IInputParser instance
+                var inputParser = serviceProvider.GetRequiredService<IInputParser>();
+                var sequence = inputParser.ParseInput(input!);
 
-            var longestIncreasingSubsequence = subsequenceFinder.FindSubsequence(sequence);
+                // Use DI to get the LongestIncreasingSubsequenceForFirstSequenceFinder instance
+                var subsequenceFinder = serviceProvider.GetRequiredService<LongestIncreasingSubsequenceForFirstSequenceFinder>();
+                var longestIncreasingSubsequence = subsequenceFinder.FindSubsequence(sequence);
 
-            Console.WriteLine("Longest Increasing Subsequence: " + string.Join(" ", longestIncreasingSubsequence));
+                Console.WriteLine("Longest Increasing Subsequence (first): " + string.Join(" ", longestIncreasingSubsequence));
+            }
         }
     }
 }

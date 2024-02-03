@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A0FF0F8-5456-4F4E-85AE-3B5196FCEFC3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1918CA8E-1C7C-4494-9466-D01D8D7B36C0}"
-	ProjectSection(SolutionItems) = preProject
-		src\SequenceInsights.Application\Core\LongestIncreasingSubsequenceFinder.cs = src\SequenceInsights.Application\Core\LongestIncreasingSubsequenceFinder.cs
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SequenceInsights.Tests", "test\SequenceInsights.Tests\SequenceInsights.Tests.csproj", "{E1A760FD-31CD-4B4F-9324-9C6C2AA2AEA9}"
 EndProject
