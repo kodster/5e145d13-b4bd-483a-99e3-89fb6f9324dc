@@ -27,4 +27,10 @@
     <ProjectReference Include="..\..\src\SequenceInsights.Application\SequenceInsights.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestData\testcases.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

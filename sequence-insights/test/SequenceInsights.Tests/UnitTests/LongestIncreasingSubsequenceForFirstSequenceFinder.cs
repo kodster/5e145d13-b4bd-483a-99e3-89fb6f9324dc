@@ -5,14 +5,15 @@ using Xunit;
 
 namespace SequenceInsights.Tests.UnitTests
 {
-    public class LongestIncreasingSubsequenceFinderTests
+    public class LongestIncreasingSubsequenceForFirstSequenceFinderTests
     {
         private readonly IInputParser _inputParser = new SpaceSeparatedInputParser();
         private readonly IOutputParser _outputParser = new OutputParser();
-        private readonly ISubsequenceFinderService _subsequenceFinderService = new LongestIncreasingSubsequenceFinder();
 
+        private readonly ISubsequenceFinderService _subsequenceFinderService =
+            new LongestIncreasingSubsequenceForFirstSequenceFinder();
 
-        [Theory(Skip = "This implementation is not compatible with the tests.")]
+        [Theory]
         [MemberData(nameof(TestDataGenerator.GetTestCaseGenerator), MemberType = typeof(TestDataGenerator))]
         public void Given_TestCase_When_Process_Then_ShouldHaveExpectedResult(string testCase, string input, string expectedOutput)
 
