@@ -13,7 +13,16 @@ public class SpaceSeparatedInputParser : IInputParser
         }
 
         // Split the input string by spaces and parse each part as an integer
-        var result = input.Split(' ').Select(int.Parse);
+        var result = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(s =>
+            {
+                if (int.TryParse(s, out var intValue))
+                {
+                    return intValue;
+                }
+
+                throw new ArgumentException($"Invalid integer: {s} in input {input}");
+            });
 
         return result;
     }
