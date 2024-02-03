@@ -1,9 +1,6 @@
-﻿namespace SequenceInsights.Application.Core;
+﻿using SequenceInsights.Application.Core.Interfaces;
 
-public interface IOutputParser
-{
-    string ParseOutput(IEnumerable<int> output);
-}
+namespace SequenceInsights.Application.Parsers.Output;
 
 public class OutputParser : IOutputParser
 {

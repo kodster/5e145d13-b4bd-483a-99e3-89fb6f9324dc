@@ -1,4 +1,6 @@
-﻿namespace SequenceInsights.Application.Core;
+﻿using SequenceInsights.Application.Core.Interfaces;
+
+namespace SequenceInsights.Application.Parsers.Input;
 
 public class SpaceSeparatedInputParser : IInputParser
 {

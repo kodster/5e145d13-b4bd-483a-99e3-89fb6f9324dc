@@ -1,5 +1,8 @@
 using FluentAssertions;
-using SequenceInsights.Application.Core;
+using SequenceInsights.Application.Core.Interfaces;
+using SequenceInsights.Application.Parsers.Input;
+using SequenceInsights.Application.Parsers.Output;
+using SequenceInsights.Application.Strategies;
 using SequenceInsights.Tests.TestData;
 using Xunit;
 

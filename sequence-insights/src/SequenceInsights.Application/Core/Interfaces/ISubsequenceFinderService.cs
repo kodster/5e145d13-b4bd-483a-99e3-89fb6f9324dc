@@ -1,4 +1,4 @@
-﻿namespace SequenceInsights.Application.Core;
+﻿namespace SequenceInsights.Application.Core.Interfaces;
 
 public interface ISubsequenceFinderService
 {

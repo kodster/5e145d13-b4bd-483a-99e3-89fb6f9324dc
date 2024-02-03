@@ -1,4 +1,4 @@
-﻿using SequenceInsights.Application.Core;
+﻿using SequenceInsights.Application.Strategies;
 
 namespace SequenceInsights.Application
 {
@@ -13,7 +13,6 @@ namespace SequenceInsights.Application
             var sequence = input.Split(' ').Select(int.Parse).ToList();
 
             var subsequenceFinder = new LongestIncreasingSubsequenceForFirstSequenceFinder();
-            //SubsequenceContext context = new SubsequenceContext(subsequenceFinder);
 
 
             var longestIncreasingSubsequence = subsequenceFinder.FindSubsequence(sequence);

@@ -1,5 +1,10 @@
-﻿namespace SequenceInsights.Application.Core;
+﻿using SequenceInsights.Application.Core.Interfaces;
 
+namespace SequenceInsights.Application.Strategies;
+
+/// <summary>
+/// This is a the dynamic approach that doesn't work for all test cases.
+/// </summary>
 public class LongestIncreasingSubsequenceFinder : ISubsequenceFinderService
 {
     public IEnumerable<int> FindSubsequence(IEnumerable<int> inputNumbers)
