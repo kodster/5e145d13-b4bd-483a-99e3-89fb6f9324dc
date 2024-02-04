@@ -56,13 +56,14 @@ jobs:
       working-directory: sequence-insights
 
     - name: Generate coverage report
+      working-directory: sequence-insights  
       run: |
          # dotnet tool install -g dotnet-reportgenerator-globaltool
          dotnet tool install --tool-path . dotnet-reportgenerator-globaltool --add-source https://api.nuget.org/v3/index.json --ignore-failed-sources
          # ./reportgenerator -reports:**/coverage.opencover.xml -targetdir:coverlet-report -reporttypes:Html
+         ./reportgenerator -reports:/UnitTestResults/coverage.cobertura.xml -targetdir:/UnitTestResults/cobertura -reporttypes:HtmlInline_AzurePipelines
          ls -R sequence-insights
          # reportgenerator -reports:/agent/_work/1/s/UnitTestResults/coverage.cobertura.xml -targetdir:/agent/_work/1/s/UnitTestResults/cobertura -reporttypes:HtmlInline_AzurePipelines
-      # working-directory: sequence-insights
 
     - name: Upload coverage report
       uses: actions/upload-artifact@v2
