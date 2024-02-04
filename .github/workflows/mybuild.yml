@@ -28,7 +28,7 @@ jobs:
       run: ls
 
     - name: Navigate to project directory
-      run: cd /sequence-insights
+      run: cd sequence-insights
 
     - name: Restore dependencies
       run: dotnet restore
