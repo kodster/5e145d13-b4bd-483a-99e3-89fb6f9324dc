@@ -51,7 +51,9 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       working-directory: sequence-insights
 
+
     - name: Run Roslyn Analyzers
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore /p:ReportAnalyzer=true /p:ReportCodeFixes=true
       working-directory: sequence-insights
+
 
