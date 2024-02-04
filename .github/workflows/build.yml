@@ -72,8 +72,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: MyExecutable
-        path: /sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
-        working-directory: sequence-insights
+        path: sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
 
     # - name: Create GitHub Release
     #   id: create_release
