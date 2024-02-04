@@ -34,6 +34,7 @@ If you have Docker installed, you can run the application in a Docker container:
 
 Build the Docker image:
    `docker build -t longest-increasing-subsequence .`
+
    `docker run -it longest-increasing-subsequence`
 
 
