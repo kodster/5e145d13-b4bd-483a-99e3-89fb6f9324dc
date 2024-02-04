@@ -44,6 +44,9 @@ jobs:
       run: dotnet build --no-restore
       working-directory: sequence-insights
 
+    - name: List contents of the test directory
+      run: ls sequence-insights/test/SequenceInsights.Tests/bin/Debug/net6.0/TestData
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: sequence-insights
