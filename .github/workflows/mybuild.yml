@@ -19,6 +19,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    # - name: Setup MSBuild Path
+    #   uses: warrenbuckley/Setup-MSBuild@v1
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -28,13 +32,15 @@ jobs:
       run: ls
 
     - name: Navigate to project directory
-      run: cd sequence-insights
-
-    - name: List contents of the current directory
-      run: ls
+      run: | 
+          cd sequence-insights
+          ls 
+      working-directory: sequence-insights
 
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: sequence-insights
+
     - name: Build
       run: dotnet build --no-restore
     - name: Test
