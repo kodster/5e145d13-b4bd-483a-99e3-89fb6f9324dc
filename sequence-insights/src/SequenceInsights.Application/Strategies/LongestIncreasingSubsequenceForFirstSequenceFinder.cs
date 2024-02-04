@@ -2,7 +2,7 @@
 
 namespace SequenceInsights.Application.Strategies;
 
-// This is Implementation that works with all tests
+// This Implementation works with all tests. We have used this for project
 public class LongestIncreasingSubsequenceForFirstSequenceFinder : ISubsequenceFinder
 {
     public IEnumerable<int> FindSubsequence(IEnumerable<int> numbers)
