@@ -8,7 +8,7 @@ on:
     branches: 
       - main
       - feature/*
-- 
+
 jobs:
   build:
 
@@ -63,3 +63,19 @@ jobs:
     #   with:
     #     name: coverlet-report
     #     path: coverlet-report
+
+    - name: Publish Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: MyExecutable
+        path: /sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/publish
+        working-directory: sequence-insights
+
+    # - name: Create GitHub Release
+    #   id: create_release
+    #   uses: actions/create-release@v1
+    #   with:
+    #     tag_name: v1.0.0
+    #     release_name: Release v1.0.0
+    #     draft: false
+    #     prerelease: false
