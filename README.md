@@ -34,9 +34,9 @@ If you have Docker installed, you can run the application in a Docker container:
 
 Build the Docker image:
 
-   `docker build -t longest-increasing-subsequence .`
+   `docker build -t longest-increasing-subsequence app.dockerfile .`
 
-   `docker run -it longest-increasing-subsequence`
+   `docker run -itp 8080:80 seq-image`
 
 
 ### Example
