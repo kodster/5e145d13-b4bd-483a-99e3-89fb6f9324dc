@@ -53,10 +53,12 @@ jobs:
 
     - name: Run tests with coverage
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      working-directory: sequence-insights
       
     - name: Generate coverage report
       run: |
-         dotnet tool install -g dotnet-reportgenerator-globaltool
+         # dotnet tool install -g dotnet-reportgenerator-globaltool
+         dotnet tool install --tool-path . dotnet-reportgenerator-globaltool --add-source https://api.nuget.org/v3/index.json --ignore-failed-sources
          reportgenerator -reports:**/coverage.opencover.xml -targetdir:coverlet-report -reporttypes:Html
       working-directory: sequence-insights
 
