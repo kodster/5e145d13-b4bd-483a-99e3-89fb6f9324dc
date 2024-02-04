@@ -13,7 +13,6 @@ public class TestDataGenerator
     {
         // Load test cases from the JSON file
         const string jsonFilePath = "TestData/testcases.json";
-        //const string jsonFilePath = "sequence-insights/test/SequenceInsights.Tests/bin/Debug/net6.0/TestData/testcases.json";
 
         var testCases = LoadTestCasesFromJson(jsonFilePath);
 
