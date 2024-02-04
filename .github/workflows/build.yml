@@ -35,7 +35,7 @@ jobs:
       working-directory: sequence-insights
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore -c Release
       working-directory: sequence-insights
 
     - name: Log contents of the test directory
