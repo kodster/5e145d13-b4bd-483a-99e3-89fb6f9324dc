@@ -27,6 +27,9 @@ jobs:
     - name: List contents of the current directory
       run: ls
 
+    - name: Navigate to project directory
+      run: cd /sequence-insights
+
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
