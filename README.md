@@ -1,4 +1,4 @@
-# SequenceInsights Application
+# SequenceInsights Application - Longest increasing subsequence finder
 
 ## Introduction
 
