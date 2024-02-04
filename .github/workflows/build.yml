@@ -50,6 +50,9 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: sequence-insights
+
+    - name: Run tests with coverage
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
       
     - name: Generate coverage report
       run: |
