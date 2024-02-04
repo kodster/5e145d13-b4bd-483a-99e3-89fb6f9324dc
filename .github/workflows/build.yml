@@ -38,8 +38,8 @@ jobs:
       run: dotnet build --no-restore
       working-directory: sequence-insights
 
-    # - name: Log contents of the test directory
-    #   run: ls -R sequence-insights/test/SequenceInsights.Tests/bin
+    - name: Log contents of the test directory
+      run: ls -R sequence-insights/src/SequenceInsights.Application/bin/
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
