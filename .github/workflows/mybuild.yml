@@ -34,8 +34,6 @@ jobs:
     - name: Navigate to project directory
       run: | 
           ls 
-          cd sequence-insights
-          ls 
       working-directory: sequence-insights
 
     - name: Restore dependencies
