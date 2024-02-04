@@ -35,6 +35,10 @@ jobs:
       working-directory: sequence-insights
 
     - name: Build
+      run: dotnet build --no-restore
+      working-directory: sequence-insights
+
+    - name: Build
       run: dotnet build --no-restore -c Release
       working-directory: sequence-insights
 
@@ -68,7 +72,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: MyExecutable
-        path: /sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/publish
+        path: /sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
         working-directory: sequence-insights
 
     # - name: Create GitHub Release
