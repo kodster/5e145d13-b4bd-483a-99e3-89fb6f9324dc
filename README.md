@@ -4,7 +4,7 @@
 
 This repository consists of functions designed to process a string input, which comprises a sequence of integers separated by a single whitespace. The primary objective is to identify and extract the longest increasing subsequence within this input. In cases where multiple sequences share the same maximum length, the function is designed to output the earliest one.
 
-For Docker - "Running in Docker" under the "Usage" section, provides instructions on building and running the application within a Docker container.
+`Running in Docker`  - under the "Usage" section, provides instructions on building and running the application within a Docker container.
 
 
 ## Getting Started
