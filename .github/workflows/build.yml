@@ -47,6 +47,10 @@ jobs:
     - name: List contents of the test directory
       run: ls sequence-insights/test/SequenceInsights.Tests/bin/Debug/net6.0/TestData
 
+    - name: Log contents of the test directory
+      run: ls -R sequence-insights/test/SequenceInsights.Tests/bin
+
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: sequence-insights
