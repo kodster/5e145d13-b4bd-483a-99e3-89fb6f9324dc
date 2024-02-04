@@ -12,7 +12,7 @@ public class TestDataGenerator
     public static IEnumerable<object[]> GetTestCaseGenerator()
     {
         // Load test cases from the JSON file
-        const string jsonFilePath = "TestData/testCases.json";
+        const string jsonFilePath = "TestData/TestCases.json";
 
         var testCases = LoadTestCasesFromJson(jsonFilePath);
 
