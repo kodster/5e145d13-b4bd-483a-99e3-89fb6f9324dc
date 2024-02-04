@@ -7,9 +7,9 @@ namespace SequenceInsights.Application.Strategies;
 /// </summary>
 public class LongestIncreasingSubsequenceFinder : ISubsequenceFinder
 {
-    public IEnumerable<int> FindSubsequence(IEnumerable<int> inputNumbers)
+    public IEnumerable<int> FindSubsequence(IEnumerable<int> numbers)
     {
-        var inputList = inputNumbers.ToList();
+        var inputList = numbers.ToList();
         var totalNumbers = inputList.Count;
 
         var subSequences = new List<int>[totalNumbers];
