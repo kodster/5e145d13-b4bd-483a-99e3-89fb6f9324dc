@@ -34,10 +34,11 @@ If you have Docker installed, you can run the application in a Docker container:
 
 Build the Docker image:
    `docker build -t longest-increasing-subsequence .`
+
    `docker run -it longest-increasing-subsequence`
 
 
-### Exmaple
+### Example
 - Enter a sequence of integers separated by a single whitespace (or type 'exit' to quit): 6 1 5 9 2
 - Output: 1 5 9 
 
