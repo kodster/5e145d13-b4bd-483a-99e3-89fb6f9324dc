@@ -1,5 +1,6 @@
 using SequenceInsights.Tests.Models;
 using SequenceInsights.Tests.Utility;
+using System.Diagnostics;
 
 namespace SequenceInsights.Tests.TestData;
 
@@ -18,6 +19,10 @@ public class TestDataGenerator
 
         foreach (var testCase in testCases!)
         {
+            Debug.Assert(testCase.TestName != null, "testCase.TestName != null");
+            Debug.Assert(testCase.Input != null, "testCase.Input != null");
+            Debug.Assert(testCase.Output != null, "testCase.Output != null");
+
             yield return new object[] { testCase.TestName, testCase.Input, testCase.Output };
         }
     }
