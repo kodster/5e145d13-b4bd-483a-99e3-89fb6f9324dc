@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
-    - name: List contents of the current directory - just a change
+    - name: List contents of the current directory - just a change - again
       run: ls
 
 
