@@ -1,8 +1,8 @@
 # SequenceInsights Application
 
-## Problem
+## Introduction
 
-This repository implements functions that takes a string input containing a sequence of integers separated by a single whitespace. The goal is to find the longest increasing subsequence present in that sequence. If multiple sequences have the same maximum length, the function should output the earliest one.
+This repository consists of functions designed to process a string input, which comprises a sequence of integers separated by a single whitespace. The primary objective is to identify and extract the longest increasing subsequence within this input. In cases where multiple sequences share the same maximum length, the function is designed to output the earliest one.
 
 ## Getting Started
 
@@ -13,23 +13,28 @@ This repository implements functions that takes a string input containing a sequ
 
 ### Installation
 
-1. Clone the repository:
-   git clone https://github.com/kodster/5e145d13-b4bd-483a-99e3-89fb6f9324dc.git
+Clone the repository:
+   - git clone https://github.com/kodster/5e145d13-b4bd-483a-99e3-89fb6f9324dc.git
+   - Open using Visaul Studio
 
 ## Usage
 
-- Run the application.
+- Run the application. F5 (or use the build file)
 - Enter a sequence of integers separated by a single whitespace.
 - To exit the program, type 'exit'.
 
-### Example
-`
-var sequenceFinder = new SequenceFinder();
-var input = "1 3 5 2 8 4 7";
-var result = sequenceFinder.FindLongestIncreasingSubsequence(input);
-Console.WriteLine("Longest Increasing Subsequence: " + string.Join(" ", result));
-`
+### Exmaple
+- Enter a sequence of integers separated by a single whitespace (or type 'exit' to quit): 6 1 5 9 2
+- Output: 1 5 9 
 
 ## Tests
+- Unit tests are included in the project to ensure the correctness of the implemented function. The test cases are defined in the testcases.json file. You can add more tests to this file or run the existing tests as part of the unit testing process.
 
- - Unit tests are included in the project to ensure the correctness of the implemented function. The test cases are defined in the testcases.json file. You can add more tests to this file or run the existing tests as part of the unit testing process.
+
+## Dependencies
+ - None.
+
+
+## Deployments
+
+- Currently only contains a build with  Continous Integration enabled.
