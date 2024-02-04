@@ -3,6 +3,8 @@
 ## Introduction
 
 This repository consists of functions designed to process a string input, which comprises a sequence of integers separated by a single whitespace. The primary objective is to identify and extract the longest increasing subsequence within this input. In cases where multiple sequences share the same maximum length, the function is designed to output the earliest one.
+For Docker - "Running in Docker" under the "Usage" section, provides instructions on building and running the application within a Docker container.
+
 
 ## Getting Started
 
@@ -19,9 +21,20 @@ Clone the repository:
 
 ## Usage
 
+### Running Locally
+
 - Run the application. F5 (or use the build file)
 - Enter a sequence of integers separated by a single whitespace.
 - To exit the program, type 'exit'.
+
+### Running in Docker
+	
+If you have Docker installed, you can run the application in a Docker container:
+
+Build the Docker image:
+   `docker build -t longest-increasing-subsequence .`
+   `docker run -it longest-increasing-subsequence`
+
 
 ### Exmaple
 - Enter a sequence of integers separated by a single whitespace (or type 'exit' to quit): 6 1 5 9 2
@@ -38,3 +51,4 @@ Clone the repository:
 ## Deployments
 
 - Currently only contains a build with  Continous Integration enabled.
+
