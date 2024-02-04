@@ -59,8 +59,8 @@ jobs:
       run: |
          # dotnet tool install -g dotnet-reportgenerator-globaltool
          dotnet tool install --tool-path . dotnet-reportgenerator-globaltool --add-source https://api.nuget.org/v3/index.json --ignore-failed-sources
-         ls
          ./reportgenerator -reports:**/coverage.opencover.xml -targetdir:coverlet-report -reporttypes:Html
+         ls -R sequence-insights/test
          # reportgenerator -reports:/agent/_work/1/s/UnitTestResults/coverage.cobertura.xml -targetdir:/agent/_work/1/s/UnitTestResults/cobertura -reporttypes:HtmlInline_AzurePipelines
       # working-directory: sequence-insights
 
