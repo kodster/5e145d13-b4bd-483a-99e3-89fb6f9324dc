@@ -24,9 +24,15 @@ Clone the repository:
 
 ### Running Locally
 
-- Run the application. F5 (or use the build file)
+- Run the application. F5
 - Enter a sequence of integers separated by a single whitespace.
 - To exit the program, type 'exit'.
+- 
+
+### Download build file
+- Download artifact from Publish Artifact step in CI from latest build.
+- e.g. Artifact download URL: https://github.com/kodster/5e145d13-b4bd-483a-99e3-89fb6f9324dc/actions/runs/7777928195/artifacts/1218963759
+- Unzip file file and add file extention .exe
 
 ### Running in Docker
 	
