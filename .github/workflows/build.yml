@@ -74,10 +74,16 @@ jobs:
         name: MyExecutable
         path: sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
 
-    
-    - name: Access Published Artifact
+
+    - name: List Files in Artifact Directory
       run: |
-        # Access a specific file within the artifact
-        cat ${{ github.workspace }}/MyExecutable/SequenceInsights.Application
-        # Use the file as needed
+        # List the contents of the 'MyExecutable' directory in the GitHub Actions workspace
+        ls -R ${{ github.workspace }}/MyExecutable
       shell: bash
+    
+    # - name: Access Published Artifact
+    #   run: |
+    #     # Access a specific file within the artifact
+    #     cat ${{ github.workspace }}/MyExecutable/SequenceInsights.Application
+    #     # Use the file as needed
+    #   shell: bash
