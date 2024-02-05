@@ -27,7 +27,6 @@ Clone the repository:
 - Run the application. F5
 - Enter a sequence of integers separated by a single whitespace.
 - To exit the program, type 'exit'.
-- 
 
 ### Download build file
 - Download artifact from Publish Artifact step in CI from latest build.
