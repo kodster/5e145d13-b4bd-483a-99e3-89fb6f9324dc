@@ -73,23 +73,3 @@ jobs:
       with:
         name: my-artifact
         path: sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
-
-    - uses: actions/download-artifact@v4
-      with:
-        name: my-artifact
-    - name: Display structure of downloaded files
-      run: ls -R
-
-
-    # - name: List Files in Artifact Directory
-    #   run: |
-    #     # List the contents of the 'MyExecutable' directory in the GitHub Actions workspace
-    #     ls -R ${{ github.workspace }}
-    #   shell: bash
-    
-    # - name: Access Published Artifact
-    #   run: |
-    #     # Access a specific file within the artifact
-    #     cat ${{ github.workspace }}/MyExecutable/SequenceInsights.Application
-    #     # Use the file as needed
-    #   shell: bash
