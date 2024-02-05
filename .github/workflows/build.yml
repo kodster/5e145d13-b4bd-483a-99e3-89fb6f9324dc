@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: Sequence.Insights build
 
 on:
   push:
@@ -9,12 +9,8 @@ on:
       - main
       - feature/*
 
-  # pull_request:
-  #   branches: [ "main" ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -41,8 +37,12 @@ jobs:
       run: dotnet build --no-restore
       working-directory: sequence-insights
 
-    # - name: Log contents of the test directory
-    #   run: ls -R sequence-insights/test/SequenceInsights.Tests/bin
+    - name: Build Release
+      run: dotnet build --no-restore -c Release
+      working-directory: sequence-insights
+
+    - name: Log contents of the test directory
+      run: ls -R sequence-insights/src/SequenceInsights.Application/bin/
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
@@ -66,3 +66,9 @@ jobs:
     #   with:
     #     name: coverlet-report
     #     path: coverlet-report
+
+    - name: Publish Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact
+        path: sequence-insights/src/SequenceInsights.Application/bin/Release/net6.0/SequenceInsights.Application
