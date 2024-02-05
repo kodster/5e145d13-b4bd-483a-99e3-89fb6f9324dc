@@ -78,7 +78,7 @@ jobs:
     - name: List Files in Artifact Directory
       run: |
         # List the contents of the 'MyExecutable' directory in the GitHub Actions workspace
-        ls -R ${{ github.workspace }}/MyExecutable
+        ls -R ${{ github.workspace }}
       shell: bash
     
     # - name: Access Published Artifact
